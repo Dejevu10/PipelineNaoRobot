@@ -54,6 +54,14 @@
          <version>1.0</version>
          <systemPath>${basedir}/lib/java-naoqi-sdk-2.1.4.13-mac64.jar</systemPath>
          </dependency>
+         
+         <dependency>
+         <groupId>java-naoqi-sdk-2.1.4.13-linux64</groupId>
+         <artifactId>java-naoqi-sdk-2.1.4.13-linux64</artifactId>
+         <scope>system</scope>
+         <version>1.0</version>
+         <systemPath>${basedir}/lib/java-naoqi-sdk-2.1.4.13-linux64.jar</systemPath>
+         </dependency>
 	</dependencies>
 
 	<build>
