@@ -5,9 +5,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.aldebaran.qi.Application;
 import com.aldebaran.qi.Session;
-import com.aldebaran.qi.helper.proxies.ALMotion;
-import com.aldebaran.qi.helper.proxies.ALRobotPosture;
-import com.aldebaran.qi.helper.proxies.ALTextToSpeech;
+
 
 @RestController
 public class RobotController {
@@ -25,41 +23,19 @@ public class RobotController {
 
 	@RequestMapping("/startRobot")
 	public String startRobot() {
-		app.start();
-		session = app.session();
+		RobotRepresentation rob = new RobotRepresentation();
 
-		try {
-			ALTextToSpeech tty = new ALTextToSpeech(session);
-			tty.say("I am available for you!");
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		rob.sayHello();
 
 		return "<h1> Robot has started! </h1>";
 	}
-	
+
 	@RequestMapping("/standUp")
 	public String standUp() {
-		app.start();
-		session = app.session();
-		try {
-			ALMotion alm = new ALMotion(session);
-			
-			ALRobotPosture alp = new ALRobotPosture(session);
-			
-			alp.applyPosture("Sit", new Float(0));
-			
-			Thread.sleep(5000);
-			
-			alp.applyPosture("StandInit", new Float(0));
-			
-			
-			
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
+
+		RobotRepresentation rob = new RobotRepresentation();
+
+		rob.standUp();
 		return "<h1> Robot stands </h1>";
 	}
 
