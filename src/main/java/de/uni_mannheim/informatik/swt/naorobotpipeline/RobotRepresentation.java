@@ -1,10 +1,13 @@
 package de.uni_mannheim.informatik.swt.naorobotpipeline;
 
+import org.springframework.stereotype.Service;
+
 import com.aldebaran.qi.Application;
 import com.aldebaran.qi.Session;
 import com.aldebaran.qi.helper.proxies.ALRobotPosture;
 import com.aldebaran.qi.helper.proxies.ALTextToSpeech;
 
+@Service
 public class RobotRepresentation {
 
 	private String robot = "tcp://192.168.1.143:9559";

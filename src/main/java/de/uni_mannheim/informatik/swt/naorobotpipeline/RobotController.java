@@ -1,20 +1,14 @@
 package de.uni_mannheim.informatik.swt.naorobotpipeline;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.aldebaran.qi.Application;
-import com.aldebaran.qi.Session;
-
 
 @RestController
 public class RobotController {
 
-	String robot = "tcp://192.168.1.143:9559";
-
-	Application app = new Application(new String[] {}, robot);
-
-	Session session;
+	@Autowired
+	private RobotRepresentation rob;
 
 	@RequestMapping("/")
 	public String getStr() {
@@ -23,7 +17,6 @@ public class RobotController {
 
 	@RequestMapping("/startRobot")
 	public String startRobot() {
-		RobotRepresentation rob = new RobotRepresentation();
 
 		rob.sayHello();
 
@@ -32,8 +25,6 @@ public class RobotController {
 
 	@RequestMapping("/standUp")
 	public String standUp() {
-
-		RobotRepresentation rob = new RobotRepresentation();
 
 		rob.standUp();
 		return "<h1> Robot stands </h1>";
