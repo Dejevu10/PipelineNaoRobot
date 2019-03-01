@@ -1,16 +1,18 @@
 package de.uni_mannheim.informatik.swt.naorobotpipeline;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+@Controller
 public class RobotController {
 
 	@Autowired
 	private RobotRepresentation rob;
 
-	@RequestMapping("/")
+	@GetMapping("/")
 	public String getStr() {
 		return "Hello";
 	}
