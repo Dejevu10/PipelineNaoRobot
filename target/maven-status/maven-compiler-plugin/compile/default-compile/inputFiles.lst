@@ -1,3 +1,3 @@
-/Users/Muro10/git/PipelineNaoRobot/src/main/java/de/uni_mannheim/informatik/swt/naorobotpipeline/RobotRepresentation.java
+/Users/Muro10/git/PipelineNaoRobot/src/main/java/de/uni_mannheim/informatik/swt/naorobotpipeline/model/RobotRepresentation.java
 /Users/Muro10/git/PipelineNaoRobot/src/main/java/de/uni_mannheim/informatik/swt/naorobotpipeline/PipelineNaoRobotApplication.java
-/Users/Muro10/git/PipelineNaoRobot/src/main/java/de/uni_mannheim/informatik/swt/naorobotpipeline/RobotController.java
+/Users/Muro10/git/PipelineNaoRobot/src/main/java/de/uni_mannheim/informatik/swt/naorobotpipeline/controller/RobotController.java
