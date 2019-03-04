@@ -1,4 +1,4 @@
-package de.uni_mannheim.informatik.swt.naorobotpipeline;
+package de.uni_mannheim.informatik.swt.naorobotpipeline.model;
 
 import org.springframework.stereotype.Service;
 
@@ -51,6 +51,16 @@ public class RobotRepresentation {
 		} finally {
 			session = null;
 		}
+	}
+
+	public boolean checkConnection() {
+		try {
+			app.start();
+			session = app.session();
+		} catch (Exception e) {
+
+		}
+		return session.isConnected();
 	}
 
 }
