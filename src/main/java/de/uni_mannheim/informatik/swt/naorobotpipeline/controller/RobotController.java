@@ -33,13 +33,24 @@ public class RobotController {
 		model.addAttribute("naoIP", naoIP);
 		model.addAttribute("naoPort", naoPort);
 
-		return "test.html";
+		return "naomainpage";
+	}
+
+	@RequestMapping(value = "/manageWords", method = RequestMethod.GET)
+	public String getManageWords() {
+
+		return "manageWords";
 	}
 
 	@RequestMapping(value = "/standUp", method = RequestMethod.GET)
 	public String standUp() {
 		rob.standUp();
 		return "<h1> Robot stands </h1>";
+	}
+
+	@RequestMapping(value = "/textTeaching", method = RequestMethod.GET)
+	public String getTextTeaching() {
+		return "textTeaching";
 	}
 
 }
