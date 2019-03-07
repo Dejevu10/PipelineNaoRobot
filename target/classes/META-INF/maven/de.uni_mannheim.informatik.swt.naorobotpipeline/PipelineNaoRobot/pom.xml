@@ -22,7 +22,7 @@
 	<repositories>
 		<repository>
 			<id>local-maven-repo</id>
-			<url>file:///${project.basedir}/local-maven-repo/local-maven-repo/</url>
+			<url>file:///${project.basedir}${file.seperator}local-maven-repo${file.seperator}local-maven-repo/</url>
 		</repository>
 	</repositories>
 
