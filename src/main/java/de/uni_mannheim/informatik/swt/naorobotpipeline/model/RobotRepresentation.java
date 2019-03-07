@@ -1,40 +1,60 @@
 package de.uni_mannheim.informatik.swt.naorobotpipeline.model;
 
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
 import com.aldebaran.qi.Application;
 import com.aldebaran.qi.Session;
 import com.aldebaran.qi.helper.proxies.ALRobotPosture;
 import com.aldebaran.qi.helper.proxies.ALTextToSpeech;
 
-@Service
+@Component
 public class RobotRepresentation {
 
-	private String robot = "tcp://192.168.1.143:9559";
-
-	private Application app = new Application(new String[] {}, robot);
+	private Application app;
 
 	private Session session;
 
-	public void sayHello() {
+	private RobotRepresentation() {
+
+	}
+
+	public void setConnection(String ip, String port) {
+
+		String robot = "tcp://" + ip + ":" + port;
+
+		app = new Application(new String[] {}, robot);
 
 		app.start();
+
 		session = app.session();
+		sayHello();
+
+	}
+
+	private void sayHello() {
 
 		try {
 			ALTextToSpeech tty = new ALTextToSpeech(session);
 			tty.say("I am available for you!");
 		} catch (Exception e) {
 			e.printStackTrace();
-		} finally {
-			session = null;
+		}
+	}
+
+	public void saySomething(String say) {
+
+		try {
+			ALTextToSpeech tty = new ALTextToSpeech(session);
+			tty.say(say);
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
 	}
 
 	public void standUp() {
 
-		app.start();
-		session = app.session();
+		Session session = app.session();
+
 		try {
 //			ALMotion alm = new ALMotion(session);
 
@@ -49,18 +69,28 @@ public class RobotRepresentation {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} finally {
+			session.close();
 			session = null;
 		}
 	}
 
 	public boolean checkConnection() {
+
+		app.start();
+
+		Session session = app.session();
+
+		boolean connected = false;
 		try {
-			app.start();
+
 			session = app.session();
 		} catch (Exception e) {
-
+			connected = session.isConnected();
+		} finally {
+			session.close();
+			session = null;
 		}
-		return session.isConnected();
+		return connected;
 	}
 
 }

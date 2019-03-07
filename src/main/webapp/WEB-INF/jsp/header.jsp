@@ -36,7 +36,7 @@
 						<div class="collapse navbar-collapse" id="navbarNavDropdown">
 							<ul class="navbar-nav">
 								<li class="nav-item"><a class="nav-link"
-									href="/start">Actions</a></li>
+									href="/actions">Actions</a></li>
 								<li class="nav-item"><a class="nav-link"
 									href="/manageWords">Manage Words</a></li>
 

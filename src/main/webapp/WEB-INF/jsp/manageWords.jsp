@@ -18,7 +18,7 @@
 				<div class="col">
 					<table class="table table-striped shadow">
 						<thead>
-							<tr style="background-color:#DCDCDC;">
+							<tr style="background-color: #DCDCDC;">
 								<th scope="col">#</th>
 								<th scope="col">Key</th>
 								<th scope="col">Value</th>
@@ -27,10 +27,12 @@
 						</thead>
 						<tbody>
 							<tr>
-								<th scope="row">1</th>
-								<td>Master</td>
-								<td>Murat Ugur Selcuk</td>
-								<td>tbd</td>
+								<form action="/robotSaySomething" method="POST">
+									<th scope="row">1</th>
+									<td name="key">Master</td>
+									<td><input type="hidden" name="value" value="Murat Ugur Selcuk">Murat Ugur Selcuk </input></td>
+									<td><input name="BUmaster" type="submit" value="let me say it!"></input></td>
+								</form>
 							</tr>
 							<tr>
 								<th scope="row">2</th>
