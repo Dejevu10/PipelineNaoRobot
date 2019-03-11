@@ -26,6 +26,11 @@ public class RobotController {
 		return "index";
 	}
 
+	@RequestMapping(value = "/walkingNao", method = RequestMethod.GET)
+	public String walkingNao() {
+		return "walkingNao";
+	}
+
 	@RequestMapping(value = "/start", method = RequestMethod.GET)
 	public String startRobot(
 			@RequestParam(name = "naoIP", required = false, defaultValue = "192.168.1.143") String naoIP,
@@ -40,8 +45,7 @@ public class RobotController {
 	}
 
 	@RequestMapping(value = "/actions", method = RequestMethod.GET)
-	public String mainPage(
-			@RequestParam(name = "naoIP", required = false, defaultValue = "192.168.1.143") String naoIP,
+	public String mainPage(@RequestParam(name = "naoIP", required = false, defaultValue = "192.168.1.143") String naoIP,
 			@RequestParam(name = "naoPort", required = false, defaultValue = "9559") String naoPort, Model model) {
 
 		return "naomainpage";

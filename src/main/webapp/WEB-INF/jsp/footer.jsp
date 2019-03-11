@@ -11,7 +11,7 @@
 
 </head>
 <body>
-	<div class="container">
+	<div class="container fixed-bottom">
 		<div class="row">
 			<div class="col">
 				<div class="list-group list-group-horizontal" style="background-color: #bb1133">

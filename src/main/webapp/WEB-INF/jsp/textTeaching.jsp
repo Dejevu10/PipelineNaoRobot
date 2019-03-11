@@ -11,8 +11,9 @@
 
 </head>
 <body>
+
+	<%@include file="header.jsp"%>
 	<div class="container">
-		<%@include file="header.jsp"%>
 		<div class="container mt-3 mb-3" style="min-height: 700px">
 			<div class="row">
 				<div class="col">
@@ -33,8 +34,9 @@
 				</div>
 			</div>
 		</div>
-		<%@include file="footer.jsp"%>
 	</div>
+	<%@include file="footer.jsp"%>
+
 
 
 

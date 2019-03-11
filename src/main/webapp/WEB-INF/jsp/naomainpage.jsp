@@ -12,26 +12,25 @@
 
 </head>
 <body>
+
+	<%@include file="header.jsp"%>
 	<div class="container">
-		<%@include file="header.jsp"%>
 		<div class="container mt-3 mb-3" style="min-height: 700px">
 			<div class="row">
 				<div class="col">
 					<div class="card-deck">
-						<a href ="#" role="button" class="btn m-2 zoom">
+						<a href="#" role="button" class="btn m-2 zoom">
 							<div class="card shadow"
 								style="width: 18rem; background-color: #DCDCDC">
-								
-									<img src="/img/nao4.png" class="card-img-top img-fluid"
-										alt="Image is not available">
-								
+
+								<img src="/img/nao4.png" class="card-img-top img-fluid"
+									alt="Image is not available">
+
 								<div class="card-body">
 									<p class="card-text">Teach me something verbally</p>
 								</div>
 							</div>
-						</a >
-
-						<a href="/textTeaching" role="button" class="btn m-2 zoom">
+						</a> <a href="/textTeaching" role="button" class="btn m-2 zoom">
 							<div class="card shadow"
 								style="width: 18rem; background-color: #DCDCDC">
 
@@ -41,9 +40,7 @@
 									<p class="card-text">Teach me something with text</p>
 								</div>
 							</div>
-						</a>
-
-						<a href="#" role="button" class="btn m-2 zoom">
+						</a> <a href="/walkingNao" role="button" class="btn m-2 zoom">
 							<div class="card shadow"
 								style="width: 18rem; background-color: #DCDCDC">
 
@@ -59,8 +56,9 @@
 				</div>
 			</div>
 		</div>
-		<%@include file="footer.jsp"%>
 	</div>
+	<%@include file="footer.jsp"%>
+
 
 
 

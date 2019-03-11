@@ -11,8 +11,9 @@
 
 </head>
 <body>
+
+	<%@include file="header.jsp"%>
 	<div class="container">
-		<%@include file="header.jsp"%>
 		<div class="container mt-3 mb-3" style="min-height: 700px">
 			<div class="row">
 				<div class="col">
@@ -30,8 +31,10 @@
 								<form action="/robotSaySomething" method="POST">
 									<th scope="row">1</th>
 									<td name="key">Master</td>
-									<td><input type="hidden" name="value" value="Murat Ugur Selcuk">Murat Ugur Selcuk </input></td>
-									<td><input name="BUmaster" type="submit" value="let me say it!"></input></td>
+									<td><input type="hidden" name="value"
+										value="Murat Ugur Selcuk">Murat Ugur Selcuk </input></td>
+									<td><input name="BUmaster" type="submit"
+										value="let me say it!"></input></td>
 								</form>
 							</tr>
 							<tr>
@@ -45,8 +48,9 @@
 				</div>
 			</div>
 		</div>
-		<%@include file="footer.jsp"%>
 	</div>
+	<%@include file="footer.jsp"%>
+
 
 
 

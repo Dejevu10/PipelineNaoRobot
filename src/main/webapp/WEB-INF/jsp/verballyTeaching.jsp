@@ -11,15 +11,16 @@
 
 </head>
 <body>
+
+	<%@include file="header.jsp"%>
 	<div class="container">
-		<%@include file="header.jsp"%>
 		<div class="container mt-3 mb-3" style="min-height: 700px">
 			<div class="row">
 				<div class="col">
 					<div class="card-deck">
 						<button type="button" class="btn m-2">
 							<div class="card shadow"
-								style="width: 18rem;background-color: #DCDCDC">
+								style="width: 18rem; background-color: #DCDCDC">
 
 								<img src="/img/nao4.png" class="card-img-top"
 									alt="Image is not available">
@@ -28,10 +29,10 @@
 								</div>
 							</div>
 						</button>
-						
+
 						<button type="button" class="btn m-2">
 							<div class="card shadow"
-								style="width: 18rem;background-color: #DCDCDC">
+								style="width: 18rem; background-color: #DCDCDC">
 
 								<img src="/img/nao4.png" class="card-img-top"
 									alt="Image is not available">
@@ -40,10 +41,10 @@
 								</div>
 							</div>
 						</button>
-						
+
 						<button type="button" class="btn m-2">
 							<div class="card shadow"
-								style="width: 18rem;background-color: #DCDCDC">
+								style="width: 18rem; background-color: #DCDCDC">
 
 								<img src="/img/nao4.png" class="card-img-top"
 									alt="Image is not available">
@@ -52,13 +53,14 @@
 								</div>
 							</div>
 						</button>
-						
+
 					</div>
 				</div>
 			</div>
 		</div>
-		<%@include file="footer.jsp"%>
 	</div>
+	<%@include file="footer.jsp"%>
+
 
 
 

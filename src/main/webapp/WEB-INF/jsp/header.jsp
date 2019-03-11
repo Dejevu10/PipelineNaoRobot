@@ -35,8 +35,7 @@
 						</button>
 						<div class="collapse navbar-collapse" id="navbarNavDropdown">
 							<ul class="navbar-nav">
-								<li class="nav-item"><a class="nav-link"
-									href="/actions">Actions</a></li>
+								<li class="nav-item"><a class="nav-link" href="/actions">Actions</a></li>
 								<li class="nav-item"><a class="nav-link"
 									href="/manageWords">Manage Words</a></li>
 
@@ -44,12 +43,14 @@
 						</div>
 					</nav>
 				</div>
+			</div>
+		</div>
+	</div>
 
 
+	<script src="/js/popper.min.js"></script>
+	<script src="/js/jquery-3.2.1.slim.min.js"></script>
 
-				<script src="/js/popper.min.js"></script>
-				<script src="/js/jquery-3.2.1.slim.min.js"></script>
-
-				<script src="/js/bootstrap.min.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
 </body>
 </html>
