@@ -1,4 +1,5 @@
 <!DOCTYPE HTML>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html>
 <head>
 <meta name="viewport"
@@ -17,6 +18,7 @@
 		<div class="container mt-3 mb-3" style="min-height: 700px">
 			<div class="row">
 				<div class="col">
+
 					<table class="table table-striped shadow">
 						<thead>
 							<tr style="background-color: #DCDCDC;">
@@ -27,7 +29,9 @@
 							</tr>
 						</thead>
 						<tbody>
-							<tr>
+							<c:forEach items="${wordMemory.words}" var="word"
+								varStatus="status">
+								<!--<tr>
 								<form action="/robotSaySomething" method="POST">
 									<th scope="row">1</th>
 									<td name="key">Master</td>
@@ -38,11 +42,27 @@
 								</form>
 							</tr>
 							<tr>
-								<th scope="row">2</th>
-								<td>Owner</td>
-								<td>Chair of Software Engineering University of Mannheim</td>
-								<td>tbd</td>
-							</tr>
+								<form action="/robotSaySomething" method="POST">
+									<th scope="row">2</th>
+									<td name="key">Owner</td>
+									<td><input type="hidden" name="value"
+										value="Chair of Software Engineering University of Mannheim">Chair of Software Engineering University of Mannheim</input></td>
+									<td><input name="BUmaster" type="submit"
+										value="let me say it!"></input></td>
+								</form>
+							</tr>-->
+								<tr>
+
+									<form action="/robotSaySomething" method="POST">
+										<th scope="row">${status.index+1}</th>
+										<td name="key">${word.key}</td>
+										<td><input type="hidden" name="value"
+											value="${word.value}">${word.value}</input></td>
+										<td><input name="BU$word.key" type="submit"
+											value="let me say it!"></input></td>
+									</form>
+								</tr>
+							</c:forEach>
 						</tbody>
 					</table>
 				</div>

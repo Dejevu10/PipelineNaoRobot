@@ -8,7 +8,7 @@ import com.aldebaran.qi.helper.proxies.ALRobotPosture;
 import com.aldebaran.qi.helper.proxies.ALTextToSpeech;
 
 @Component
-public class RobotRepresentation {
+public class RobotRepresentation implements IRobotRepresentation {
 
 	private Application app;
 
@@ -36,16 +36,6 @@ public class RobotRepresentation {
 		try {
 			ALTextToSpeech tty = new ALTextToSpeech(session);
 			tty.say("I am available for you!");
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-
-	public void saySomething(String say) {
-
-		try {
-			ALTextToSpeech tty = new ALTextToSpeech(session);
-			tty.say(say);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -91,6 +81,36 @@ public class RobotRepresentation {
 			session = null;
 		}
 		return connected;
+	}
+
+	@Override
+	public void naoMove(Movement move) {
+		IRobotWalking robotWalk = new RobotWalking();
+
+		Float xWalk = new Float(0.5);
+
+		Float yWalk = new Float(0.5);
+
+		if (move == Movement.FORWARD) {
+			robotWalk.moveForward(xWalk, session);
+		} else if (move == Movement.BACKWARD) {
+			robotWalk.moveBackward(-xWalk, session);
+		} else if (move == Movement.LEFT) {
+			robotWalk.moveLeft(yWalk, session);
+		} else if (move == Movement.RIGHT) {
+			robotWalk.moveRight(-yWalk, session);
+		}else if (move == Movement.TURNRIGHT) {
+			robotWalk.turnRight(xWalk, session);
+		}
+
+	}
+
+	@Override
+	public void naoTalk(String text) {
+		IRobotTalking robotTalk = new RobotTalking();
+
+		robotTalk.sayText(text, this.session);
+
 	}
 
 }

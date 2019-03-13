@@ -20,29 +20,30 @@
 			<div class="row" style="height: 100px; margin-top: 90px">
 				<div class="col "></div>
 				<div class="col">
-					<a role="button" class="btn w-100 h-100 btn-light"><img
-						style="height: 100px" src="/img/robot-forward.png" alt="F"></a>
+					<a href="/letNaoWalkF" role="button"
+						class="btn w-100 h-100 btn-light"><img style="height: 100px"
+						src="/img/robot-forward.png" alt="F"></a>
 				</div>
 				<div class="col "></div>
 			</div>
 			<div class="row" style="height: 100px; margin: 25px 0 25px 0">
 				<div class="col">
-					<a role="button" class="btn w-100 h-100 btn-light"><img
+					<a href="/letNaoWalkL" role="button" class="btn w-100 h-100 btn-light"><img
 						style="height: 100px" src="/img/robot-left.png" alt="L"></a>
 				</div>
 				<div class="col ">
-					<a role="button" class="zoom btn w-100 h-100 btn-light"><img
+					<a href="/letNaoTurnRight" role="button" class="zoom btn w-100 h-100 btn-light"><img
 						style="height: 100px;" src="/img/robot-turn.jpg" alt="Turn-Right"></a>
 				</div>
 				<div class="col ">
-					<a role="button" class="btn w-100 h-100 btn-light"><img
+					<a href="/letNaoWalkR" role="button" class="btn w-100 h-100 btn-light"><img
 						style="height: 100px" src="/img/robot-right.png" alt="R"></a>
 				</div>
 			</div>
 			<div class="row" style="height: 100px">
 				<div class="col "></div>
 				<div class="col ">
-					<a role="button" class="btn btn-light w-100 h-100"><img
+					<a href="/letNaoWalkB" role="button" class="btn btn-light w-100 h-100"><img
 						style="height: 100px" src="/img/robot-backward.png" alt="B"></a>
 				</div>
 				<div class="col "></div>
