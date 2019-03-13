@@ -15,7 +15,7 @@
 		<div class="container-fluid">
 			<h1 class="mt-3">
 				<span class="badge badge-secondary"
-					style="background-color: #DCDCDC;">Thesis: Supporting
+					style="background-color: #DCDCDC;">Thesis: Support of
 					Continuous Deployment for Cyber Physical Systems</span>
 			</h1>
 
