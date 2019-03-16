@@ -105,6 +105,13 @@ public class MainController {
 		return robController.robotSaySomething(textToSay);
 	}
 
+	@RequestMapping(value = "/textToSay", method = RequestMethod.POST)
+	public String robotTextToSay(
+			@RequestParam(name = "naoText", required = true, defaultValue = "Nothing to say") String textToSay) {
+
+		return wordContr.determineTextToSay(textToSay);
+	}
+
 	@RequestMapping(value = "/textTeaching", method = RequestMethod.GET)
 	public String getTextTeaching() {
 		return "textTeaching";

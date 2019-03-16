@@ -16,7 +16,7 @@
 	<%@include file="header.jsp"%>
 	<div class="container">
 		<div class="container mt-3 mb-3 align-middle"
-			style="min-height: 700px">
+			style="min-height: 210px">
 			<div class="row" style="height: 100px; margin-top: 90px">
 				<div class="col "></div>
 				<div class="col">
@@ -28,27 +28,44 @@
 			</div>
 			<div class="row" style="height: 100px; margin: 25px 0 25px 0">
 				<div class="col">
-					<a href="/letNaoWalkL" role="button" class="btn w-100 h-100 btn-light"><img
-						style="height: 100px" src="/img/robot-left.png" alt="L"></a>
+					<a href="/letNaoWalkL" role="button"
+						class="btn w-100 h-100 btn-light"><img style="height: 100px"
+						src="/img/robot-left.png" alt="L"></a>
 				</div>
 				<div class="col ">
-					<a href="/letNaoTurnRight" role="button" class="zoom btn w-100 h-100 btn-light"><img
+					<a href="/letNaoTurnRight" role="button"
+						class="zoom btn w-100 h-100 btn-light"><img
 						style="height: 100px;" src="/img/robot-turn.jpg" alt="Turn-Right"></a>
 				</div>
 				<div class="col ">
-					<a href="/letNaoWalkR" role="button" class="btn w-100 h-100 btn-light"><img
-						style="height: 100px" src="/img/robot-right.png" alt="R"></a>
+					<a href="/letNaoWalkR" role="button"
+						class="btn w-100 h-100 btn-light"><img style="height: 100px"
+						src="/img/robot-right.png" alt="R"></a>
 				</div>
 			</div>
 			<div class="row" style="height: 100px">
 				<div class="col "></div>
 				<div class="col ">
-					<a href="/letNaoWalkB" role="button" class="btn btn-light w-100 h-100"><img
-						style="height: 100px" src="/img/robot-backward.png" alt="B"></a>
+					<a href="/letNaoWalkB" role="button"
+						class="btn btn-light w-100 h-100"><img style="height: 100px"
+						src="/img/robot-backward.png" alt="B"></a>
 				</div>
 				<div class="col "></div>
 			</div>
+			<div class="row mt-5">
+				<form method="POST" action="/textToSay">
+					<div class="form-inline">
+						<input placeholder="Tell me what to say"
+							class="form-control form-control-lg" type="text" name="naoText"
+							size="40"> <input class="btn btn-success ml-2"
+							type="submit" value="Speak!">
+					</div>
+
+				</form>
+			</div>
+
 		</div>
+
 	</div>
 	<%@include file="footer.jsp"%>
 
