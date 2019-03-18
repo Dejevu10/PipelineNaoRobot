@@ -1,0 +1,15 @@
+de/uni_mannheim/informatik/swt/naorobotpipeline/model/IRobotWalking.class
+de/uni_mannheim/informatik/swt/naorobotpipeline/controller/MainController.class
+de/uni_mannheim/informatik/swt/naorobotpipeline/model/IRobotTalking.class
+de/uni_mannheim/informatik/swt/naorobotpipeline/model/RobotWalking.class
+de/uni_mannheim/informatik/swt/naorobotpipeline/model/Word.class
+de/uni_mannheim/informatik/swt/naorobotpipeline/PipelineNaoRobotApplication.class
+de/uni_mannheim/informatik/swt/naorobotpipeline/controller/RobotController.class
+de/uni_mannheim/informatik/swt/naorobotpipeline/model/RobotRepresentation.class
+de/uni_mannheim/informatik/swt/naorobotpipeline/model/Movement.class
+de/uni_mannheim/informatik/swt/naorobotpipeline/controller/RobotControllerTest.class
+de/uni_mannheim/informatik/swt/naorobotpipeline/model/IRobotRepresentation.class
+de/uni_mannheim/informatik/swt/naorobotpipeline/controller/WordController.class
+de/uni_mannheim/informatik/swt/naorobotpipeline/model/IWordMemory.class
+de/uni_mannheim/informatik/swt/naorobotpipeline/model/WordMemory.class
+de/uni_mannheim/informatik/swt/naorobotpipeline/model/RobotTalking.class
