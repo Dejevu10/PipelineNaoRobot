@@ -24,6 +24,10 @@ public class WordController {
 		return this.wordMemory;
 	}
 
+	public boolean removeString(String key) {
+		return this.wordMemory.removeString(key);
+	}
+
 	public String determineTextToSay(String textToSay) {
 
 		// First split array into parts
@@ -60,7 +64,6 @@ public class WordController {
 
 	// toDo
 	private String askMemoryTheWord(String key) {
-		System.out.println(key);
 
 		String value = this.wordMemory.getString(key);
 		return value;

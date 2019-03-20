@@ -67,8 +67,7 @@ public class MainController {
 	}
 
 	@RequestMapping(value = "/start", method = RequestMethod.GET)
-	public String startRobot(
-			@RequestParam(name = "naoIP", required = false, defaultValue = "192.168.1.143") String naoIP,
+	public String startRobot(@RequestParam(name = "naoIP", required = false, defaultValue = "nao.local") String naoIP,
 			@RequestParam(name = "naoPort", required = false, defaultValue = "9559") String naoPort, Model model) {
 
 		model.addAttribute("naoIP", naoIP);
@@ -90,26 +89,49 @@ public class MainController {
 
 		IWordMemory memory = wordContr.getMemory();
 
-		for (int i = 0; i < memory.getWords().size(); i++) {
-			System.out.println(memory.getWords().get(i).getKey() + " " + memory.getWords().get(i).getValue());
-		}
-
 		return new ModelAndView("manageWords", "wordMemory", memory);
 
 	}
 
-	@RequestMapping(value = "/robotSaySomething", method = RequestMethod.POST)
-	public String robotSaySomething(
+	@RequestMapping(value = "/addNewWord", method = RequestMethod.POST)
+	public ModelAndView addNewWord(@RequestParam(name = "key", required = true, defaultValue = "NoKey") String key,
+			@RequestParam(name = "value", required = true, defaultValue = "NoValue") String value) {
+
+		this.wordContr.addWord(key.trim(), value.trim());
+
+		return this.getManageWords();
+	}
+
+	@RequestMapping(value = "/robotSaySomething", method = RequestMethod.POST, params = "speak")
+	public ModelAndView robotSaySomething(
 			@RequestParam(name = "value", required = false, defaultValue = "Murat") String textToSay) {
 
-		return robController.robotSaySomething(textToSay);
+		robController.robotSaySomething(textToSay);
+
+		return this.getManageWords();
+	}
+
+	@RequestMapping(value = "/robotSaySomething", method = RequestMethod.POST, params = "remove")
+	public ModelAndView robotRemoveWord(
+			@RequestParam(name = "key", required = false, defaultValue = "Murat") String key) {
+
+		System.out.println(key);
+		System.out.println(this.wordContr.removeString(key.trim()));
+
+		return this.getManageWords();
 	}
 
 	@RequestMapping(value = "/textToSay", method = RequestMethod.POST)
 	public String robotTextToSay(
 			@RequestParam(name = "naoText", required = true, defaultValue = "Nothing to say") String textToSay) {
 
-		return wordContr.determineTextToSay(textToSay);
+		String resolvedText = wordContr.determineTextToSay(textToSay.trim());
+
+		System.out.println(resolvedText.trim());
+
+		robController.robotSaySomething(resolvedText.trim());
+
+		return "walkingNao";
 	}
 
 	@RequestMapping(value = "/textTeaching", method = RequestMethod.GET)

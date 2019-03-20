@@ -67,4 +67,18 @@ public class WordMemory implements IWordMemory {
 		return (this.wordList.get(key) != null);
 	}
 
+	@Override
+	public boolean removeString(String key) {
+
+		if (this.wordList != null) {
+			if (this.wordList.containsKey(key)) {
+				this.wordList.remove(key);
+
+				this.setWordList();
+				return true;
+			}
+		}
+		return false;
+	}
+
 }

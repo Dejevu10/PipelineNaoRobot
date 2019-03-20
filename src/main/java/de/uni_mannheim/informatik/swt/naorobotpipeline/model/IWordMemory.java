@@ -9,6 +9,8 @@ public interface IWordMemory {
 	public String getString(String key);
 
 	public boolean addString(String key, String value);
+	
+	public boolean removeString(String key);
 
 	public List<Word> getWords();
 

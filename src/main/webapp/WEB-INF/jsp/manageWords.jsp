@@ -55,11 +55,12 @@
 
 									<form action="/robotSaySomething" method="POST">
 										<th scope="row">${status.index+1}</th>
-										<td name="key">${word.key}</td>
+										<td><input type="hidden" name="key" value="${word.key}"></input>${word.key}</td>
 										<td><input type="hidden" name="value"
 											value="${word.value}">${word.value}</input></td>
-										<td><input name="BU$word.key" type="submit"
-											value="let me say it!"></input></td>
+										<td><input class="btn btn-primary" name="speak"
+											type="submit" value="speak"></input><input name="remove"
+											class="btn btn-secondary" type="submit" value="remove"></input></td>
 									</form>
 								</tr>
 							</c:forEach>

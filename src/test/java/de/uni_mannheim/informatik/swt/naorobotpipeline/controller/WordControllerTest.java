@@ -33,9 +33,9 @@ public class WordControllerTest {
 	 */
 	@Test
 	public void testSuccessSplitting() {
-		String text = "$Master";
+		String text = "Hello my $Master";
 
-		String success = "Murat Ugur Selcuk";
+		String success = "Hello my Murat Ugur Selcuk";
 
 		contr.getMemory();
 

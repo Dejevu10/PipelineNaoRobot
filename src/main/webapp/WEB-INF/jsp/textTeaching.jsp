@@ -12,32 +12,41 @@
 </head>
 <body>
 
-	<%@include file="header.jsp"%>
-	<div class="container">
-		<div class="container mt-3 mb-3" style="min-height: 700px">
-			<div class="row">
-				<div class="col">
-					<form>
-						<div class="form-group">
-							<label for="keyInput">Key</label> <input type="text"
-								class="form-control" id="exampleInputEmail1"
-								placeholder="Enter key identifier (only one word and in case of availability it overwrites the old value)">
 
-						</div>
-						<div class="form-group">
-							<label for="valueInput">Value</label> <input type="text"
-								class="form-control" id="valueInput"
-								placeholder="Value (Can be any kind of text)">
-						</div>
-						<button type="submit" class="btn btn-primary">Add</button>
-					</form>
+	<div class="modal fade" id="textTeach" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Teach me new words!</h5>
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
 				</div>
+				<form action="/addNewWord" method="POST">
+					<div class="modal-body">
+						<div class="form-group row">
+							<label class="col-sm-2">Key:</label><input
+								class="form-control form-control col-sm-10" type="text"
+								name="key" value="${key}" placeHolder="One keyword (e.g Master)">
+							<small class="form-text text-muted ml-2 mr-2"> If this
+								key already exists it will be overwritten with the new value!</small>
+						</div>
+						<div class="form-group row">
+							<label class="col-sm-2">Value:</label><input
+								class="form-control form-control col-sm-10" value="${value}"
+								type="text" name="value" placeHolder="Any value as text">
+						</div>
+					</div>
+					<div class="modal-footer">
+						<input type="submit" class="btn btn-primary" value="Add word">
+						<button type="button" class="btn btn-secondary"
+							data-dismiss="modal">Close</button>
+					</div>
+				</form>
 			</div>
 		</div>
 	</div>
-	<%@include file="footer.jsp"%>
-
-
 
 
 	<script src="/js/popper.min.js"></script>

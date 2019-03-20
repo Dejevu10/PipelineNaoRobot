@@ -19,18 +19,7 @@
 			<div class="row">
 				<div class="col">
 					<div class="card-deck">
-						<a href="#" role="button" class="btn m-2 zoom">
-							<div class="card shadow"
-								style="width: 18rem; background-color: #DCDCDC">
-
-								<img src="/img/nao4.png" class="card-img-top img-fluid"
-									alt="Image is not available">
-
-								<div class="card-body">
-									<p class="card-text">Teach me something verbally</p>
-								</div>
-							</div>
-						</a> <a href="/textTeaching" role="button" class="btn m-2 zoom">
+						<a href="/textTeaching" role="button" class="btn m-2 zoom" data-toggle="modal" data-target="#textTeach">
 							<div class="card shadow"
 								style="width: 18rem; background-color: #DCDCDC">
 
@@ -56,6 +45,7 @@
 				</div>
 			</div>
 		</div>
+		<%@include file="textTeaching.jsp"%>
 	</div>
 	<%@include file="footer.jsp"%>
 
