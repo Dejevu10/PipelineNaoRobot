@@ -13,7 +13,7 @@ node {
     stage('maven surefire-integrationtests'){
         //tbd
         
-        sh 'mvn surefire:test -Dtest=WordControllerTest'
+        sh 'mvn clean install'
         
     }
     
