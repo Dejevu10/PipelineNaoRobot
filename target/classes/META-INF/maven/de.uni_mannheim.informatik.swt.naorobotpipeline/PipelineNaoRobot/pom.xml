@@ -90,9 +90,6 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				<configuration>
-					<outputDirectory>${basedir}/target/test_results/</outputDirectory>
-				</configuration>
 			</plugin>
 		</plugins>
 
