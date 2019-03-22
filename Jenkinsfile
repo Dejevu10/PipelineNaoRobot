@@ -3,20 +3,22 @@ node {
         git 'https://github.com/Dejevu10/NaoRobotPipeline.git'
     }
     
-    stage('build image'){
+    stage('maven surefire-unittest'){
         //tbd
-        sh 'docker-compose build '
+//        sh 'docker-compose build '
+        
         
     }
     
-    stage('run container'){
+    stage('maven surefire-integrationtests'){
         //tbd
         
-        sh 'docker-compose up ' 
+        sh 'mvn surefire:test -Dtest=WordControllerTest'
+        
     }
     
-    stage('run mvn test in container'){
+    stage('maven report integrationtests'){
         
-       	
+       	junit './target/surefire-reports/*.xml'
     }
 }
