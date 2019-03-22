@@ -12,7 +12,7 @@ node {
     
     stage('maven surefire-integrationtests'){
         //tbd
-        
+        sh 'ls'
         sh 'mvn clean install'
         
     }
