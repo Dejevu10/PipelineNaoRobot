@@ -2,7 +2,9 @@ FROM maven:3.5.3-jdk-8-alpine
 
 RUN mkdir webapp
 
-COPY .\ ./
+COPY ./ ./
+
+VOLUME ./target/surefire-reports/ ./target/surefire-reports/
 
 RUN cd local-maven-repo &&\ mvn deploy:deploy-file -DgroupId=org.uni.mannheim.naorobot -DartifactId=naorobotMac -Dversion=1.0 -Durl=file:./local-maven-repo/ -DrepositoryId=local-maven-repo -DupdateReleaseInfo=true -Dfile=./java-naoqi-sdk-2.1.4.13-mac64.jar
 	&&\ mvn deploy:deploy-file -DgroupId=org.uni.mannheim.naorobot -DartifactId=naorobotLinux -Dversion=1.0 -Durl=file:./local-maven-repo/ -DrepositoryId=local-maven-repo -DupdateReleaseInfo=true -Dfile=./java-naoqi-sdk-2.1.4.13-linux64.jar
