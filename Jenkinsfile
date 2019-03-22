@@ -1,6 +1,6 @@
 node {
     stage('build jar'){
-        git 'https://github.com/Dejevu10/NaoRobotPipeline.git'
+        git 'https://github.com/Dejevu10/PipelineNaoRobot.git'
     }
     
     stage('maven surefire-unittest'){
