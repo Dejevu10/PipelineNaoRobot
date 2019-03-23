@@ -91,9 +91,9 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
-        <outputName>test_results</outputName>
-        <testFailureIgnore>true</testFailureIgnore>
-        </configuration>
+					<outputName>test_results</outputName>
+					<testFailureIgnore>true</testFailureIgnore>
+				</configuration>
 			</plugin>
 		</plugins>
 

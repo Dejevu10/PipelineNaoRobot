@@ -25,7 +25,17 @@ public class WordController {
 	}
 
 	public boolean removeString(String key) {
+//		try {
+
+//			WordMemoryException.emptyKey(key);
+//			WordMemoryException.badKey(key);
+
 		return this.wordMemory.removeString(key);
+//		} catch (WordMemoryException e) {
+//			e.printStackTrace();
+//		}
+
+//		return false;
 	}
 
 	public String determineTextToSay(String textToSay) {
@@ -74,8 +84,17 @@ public class WordController {
 		ArrayList<String> keys = new ArrayList<String>();
 
 		// find keys
+//		try {
 		for (int i = 0; i < words.length; i++) {
 			if (words[i].charAt(0) == '$') {
+
+//					WordMemoryException.emptyKey(words[i]);
+//					WordMemoryException.badKey(words[i]);
+
+//				if (key.matches("$+\\w*(\\W)+\\w*")) {
+//					throw new WordMemoryException();
+//				}
+
 				String key = words[i].substring(1);
 				keys.add(key);
 			}
@@ -94,8 +113,12 @@ public class WordController {
 
 			values.add(value);
 		}
-
 		return values;
+//		} catch (WordMemoryException e) {
+//			e.printStackTrace();
+//		}
+//
+//		return keys;
 	}
 
 }

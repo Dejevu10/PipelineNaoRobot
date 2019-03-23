@@ -45,6 +45,22 @@ public class WordControllerTest {
 	}
 
 	/**
+	 * test the successful splitting of words
+	 * 
+	 * 
+	 */
+	@Test
+	public void testSuccessMultipleSplitting() {
+		String text = "Hello $Master you study at $Owner";
+
+		String success = "Hello Murat Ugur Selcuk you study at Chair of Software Engineering in University of Mannheim";
+
+		String output = contr.determineTextToSay(text);
+
+		assertTrue(output.trim().equals(success.trim()));
+	}
+
+	/**
 	 * Test successful add word and ask for size
 	 */
 	@Test
@@ -96,7 +112,7 @@ public class WordControllerTest {
 	}
 
 	/**
-	 * Test successful add and remove of word, word should not be findable
+	 * Test successful add and remove of word, word should not be available
 	 */
 
 	@Test
