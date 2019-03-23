@@ -40,7 +40,7 @@ public class WordMemoryTest {
 		String value = "Muro";
 
 		wordMemory.addString(key, value);
-		
+
 		wordMemory.setWordList();
 
 		assertTrue(wordMemory.getWords().size() == 3);
