@@ -63,6 +63,7 @@ public class WordMemory implements IWordMemory {
 		}
 
 		this.wordList.put(key, value);
+		this.setWordList();
 
 		return (this.wordList.get(key) != null);
 	}
