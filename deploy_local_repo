@@ -1,5 +1,28 @@
+
+############# MAVEN LOCAL REPO FOR NAO ############
+
+
 mvn deploy:deploy-file -DgroupId=org.uni.mannheim.naorobot -DartifactId=naorobotMac -Dversion=1.0 -Durl=file:./local-maven-repo/ -DrepositoryId=local-maven-repo -DupdateReleaseInfo=true -Dfile=./java-naoqi-sdk-2.1.4.13-mac64.jar
 
 mvn deploy:deploy-file -DgroupId=org.uni.mannheim.naorobot -DartifactId=naorobotLinux -Dversion=1.0 -Durl=file:./local-maven-repo/ -DrepositoryId=local-maven-repo -DupdateReleaseInfo=true -Dfile=./java-naoqi-sdk-2.1.4.13-linux64.jar
 
 mvn deploy:deploy-file -DgroupId=org.uni.mannheim.naorobot -DartifactId=naorobotWindows -Dversion=1.0 -Durl=file:./local-maven-repo/ -DrepositoryId=local-maven-repo -DupdateReleaseInfo=true -Dfile=./java-naoqi-sdk-2.1.4.13-win32-vs2010.jar
+
+
+################ JENKINS SETUP ####################
+
+user: dejevu
+pw: admin
+port: 3636
+
+set new jenkins home -> go to jenkins folder, then
+
+shell:
+
+export JENKINS_HOME=$pwd.jenkins
+
+batch:
+
+SET JENKINS_HOME=C:\users\jhon\.jenkins
+
+###################################################
