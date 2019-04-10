@@ -11,15 +11,24 @@ node {
  
     stage('maven surefire-unittest'){
         //tbd
-//        sh 'docker-compose build '
+		
+		sh "docker build -t unittest -f test_docker_unittest_osx"
+		
+		sh "docker run --name unittest unittest:latest mvn surefire:test -Dtest=WordMemoryTest";
+		
+		sh "docker cp unittest:/target/surefire-reports/ target/"
         
         
     }
     
     stage('maven surefire-integrationtests'){
         //tbd
-//        sh 'ls'
-//        sh 'mvn clean install'
+		
+		sh "docker build -t integrationtest -f test_docker_integrationtest_osx"
+		
+		sh "docker run --name integrationtest integrationtest:latest mvn surefire:test -Dtest=WordControllerTest";
+		
+		sh "docker cp integrationtest:/target/surefire-reports/ target/"
         
     }
     
