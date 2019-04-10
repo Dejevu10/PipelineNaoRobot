@@ -1,10 +1,10 @@
 node {
     stage('build jar'){
     
-    	println "Pulling from github"
+    	echo "Pulling from github"
         git 'https://github.com/Dejevu10/PipelineNaoRobot.git';
         
-        println "Building the docker Image"
+        echo "Building the docker Image"
         sh "docker build -t naowebapp:${env.BUILD_NUMBER} -f test_docker_osx ."
     }
  
@@ -31,7 +31,7 @@ node {
     
         stage('publish to docker-hub'){
         
-        println "Starting the push phase"
+        echo "Starting the push phase"
         
        	sh 'docker login --username mselcuk1994 --password admin2019'
        	
