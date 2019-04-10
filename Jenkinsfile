@@ -29,7 +29,7 @@ node {
         
        	sh 'docker login --username mselcuk1994 --password admin2019'
        	
-       	sh "docker tag naowebapp:${env.BUILD_NUMBER} mselcuk1994/naowebapp"  
+       	sh "docker tag naowebapp:${env.BUILD_NUMBER} mselcuk1994/naowebapp:${env.BUILD_NUMBER}"  
        	
 		sh "docker push mselcuk1994/naowebapp:${env.BUILD_NUMBER}"
        	
