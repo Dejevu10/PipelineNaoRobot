@@ -8,13 +8,13 @@ node {
         sh "docker build -t naowebapp:${env.BUILD_NUMBER} -f test_docker_osx ."
     }
  
- parallel(   
+ 
     stage('maven surefire-unittest'){
         //tbd
 //        sh 'docker-compose build '
         
         
-    },
+    }
     
     stage('maven surefire-integrationtests'){
         //tbd
@@ -22,14 +22,8 @@ node {
 //        sh 'mvn clean install'
         
     }
-    )
     
-    stage('maven report integrationtests'){
-        
-//       	junit 'target/surefire-reports/*.xml'
-    }
-    
-        stage('publish to docker-hub'){
+    stage('publish to docker-hub'){
         
         echo "Starting the push phase"
         
