@@ -12,7 +12,7 @@ node {
     stage('maven surefire-unittest'){
         //tbd
 		
-		sh "docker build -t unittest -f test_docker_unittest_osx"
+		sh "docker build -t unittest -f test_docker_unittest_osx ."
 		
 		sh "docker run --name unittest unittest:latest mvn surefire:test -Dtest=WordMemoryTest";
 		
@@ -24,7 +24,7 @@ node {
     stage('maven surefire-integrationtests'){
         //tbd
 		
-		sh "docker build -t integrationtest -f test_docker_integrationtest_osx"
+		sh "docker build -t integrationtest -f test_docker_integrationtest_osx ."
 		
 		sh "docker run --name integrationtest integrationtest:latest mvn surefire:test -Dtest=WordControllerTest";
 		
