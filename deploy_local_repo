@@ -19,7 +19,7 @@ set new jenkins home -> go to jenkins folder, then
 
 shell:
 
-export JENKINS_HOME=$pwd.jenkins
+export JENKINS_HOME=$(pwd)/.jenkins
 
 batch:
 
