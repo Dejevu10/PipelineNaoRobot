@@ -23,7 +23,7 @@ node {
     
     stage('maven report integrationtests'){
         
-       	junit 'target/surefire-reports/*.xml'
+//       	junit 'target/surefire-reports/*.xml'
     }
     
         stage('publish to docker-hub'){
