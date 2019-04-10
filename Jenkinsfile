@@ -31,7 +31,7 @@ node {
        	
        	sh "docker tag naowebapp:${env.BUILD_NUMBER} mselcuk1994/naowebapp"  
        	
-		sh "docker push mselcuk1994/naowebapp"
+		sh "docker push mselcuk1994/naowebapp:${env.BUILD_NUMBER}"
        	
     }
 }
