@@ -32,7 +32,7 @@ node {
 		
 		sh "docker build -t integrationtest -f test_docker_integrationtest_osx ."
 		
-		sh "docker run --name integrationtest integrationtest:latest mvn surefire:test -Dtest=WordControllerTest";
+		sh "docker run --name integrationtest integrationtest:latest";
 		
 		sh "docker cp integrationtest:/target/surefire-reports/ target/"
 		
