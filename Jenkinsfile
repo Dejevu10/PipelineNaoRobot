@@ -15,6 +15,9 @@ node {
 		//build unittest docker image
 		sh "docker build -t unittest -f test_docker_unittest_osx ."
 		
+		//remove container
+		sh 'docker rm $(docker ps -aq)'
+		
 		//run the container
 		sh "docker run --name unittest unittest:latest"
 		
