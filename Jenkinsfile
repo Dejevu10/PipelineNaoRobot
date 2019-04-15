@@ -41,6 +41,13 @@ node {
         
     }
     
+    stage('publish test resports'){
+                       
+        junit '**/target/surefire-reports/*.xml' 
+        
+     }
+
+    
     stage('publish to docker-hub'){
         
         echo "Starting the push phase"
