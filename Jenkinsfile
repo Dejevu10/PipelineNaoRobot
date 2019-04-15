@@ -59,10 +59,5 @@ node {
 		sh "docker push mselcuk1994/naowebapp:${env.BUILD_NUMBER}"
        	
     }
-    
-    post{
-        
-        emailext body: 'This is a test E-Mail', subject: 'Project worked', to: 'muratselcuk1994@gmail.com mselcukthesis@gmail.com'
-    }
 
 }
