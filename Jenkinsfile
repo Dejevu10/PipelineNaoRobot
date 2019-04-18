@@ -8,7 +8,7 @@ node {
         sh "docker build -t naowebapp:${env.BUILD_NUMBER} -f test_docker_osx ."
     }
  
- 
+ //Adding a comment to enable Push into github
     stage('maven surefire-unittest'){
         //tbd
 		
