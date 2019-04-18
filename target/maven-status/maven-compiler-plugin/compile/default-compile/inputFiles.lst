@@ -1,16 +1,15 @@
-/Users/Muro10/git/PipelineNaoRobot/src/main/java/de/uni_mannheim/informatik/swt/naorobotpipeline/exception/WordMemoryException.java
 /Users/Muro10/git/PipelineNaoRobot/src/main/java/de/uni_mannheim/informatik/swt/naorobotpipeline/model/IRobotWalking.java
 /Users/Muro10/git/PipelineNaoRobot/src/main/java/de/uni_mannheim/informatik/swt/naorobotpipeline/model/IWordMemory.java
 /Users/Muro10/git/PipelineNaoRobot/src/main/java/de/uni_mannheim/informatik/swt/naorobotpipeline/model/Word.java
 /Users/Muro10/git/PipelineNaoRobot/src/main/java/de/uni_mannheim/informatik/swt/naorobotpipeline/model/RobotRepresentation.java
 /Users/Muro10/git/PipelineNaoRobot/src/main/java/de/uni_mannheim/informatik/swt/naorobotpipeline/model/WordMemory.java
 /Users/Muro10/git/PipelineNaoRobot/src/main/java/de/uni_mannheim/informatik/swt/naorobotpipeline/model/RobotTalking.java
+/Users/Muro10/git/PipelineNaoRobot/src/main/java/de/uni_mannheim/informatik/swt/naorobotpipeline/controller/RobotControllerOld.java
 /Users/Muro10/git/PipelineNaoRobot/src/main/java/de/uni_mannheim/informatik/swt/naorobotpipeline/model/IRobotRepresentation.java
 /Users/Muro10/git/PipelineNaoRobot/src/main/java/de/uni_mannheim/informatik/swt/naorobotpipeline/controller/RobotController.java
 /Users/Muro10/git/PipelineNaoRobot/src/main/java/de/uni_mannheim/informatik/swt/naorobotpipeline/controller/WordController.java
 /Users/Muro10/git/PipelineNaoRobot/src/main/java/de/uni_mannheim/informatik/swt/naorobotpipeline/model/Movement.java
 /Users/Muro10/git/PipelineNaoRobot/src/main/java/de/uni_mannheim/informatik/swt/naorobotpipeline/controller/MainController.java
-/Users/Muro10/git/PipelineNaoRobot/src/main/java/de/uni_mannheim/informatik/swt/naorobotpipeline/controller/RobotControllerTest.java
 /Users/Muro10/git/PipelineNaoRobot/src/main/java/de/uni_mannheim/informatik/swt/naorobotpipeline/model/IRobotTalking.java
 /Users/Muro10/git/PipelineNaoRobot/src/main/java/de/uni_mannheim/informatik/swt/naorobotpipeline/PipelineNaoRobotApplication.java
 /Users/Muro10/git/PipelineNaoRobot/src/main/java/de/uni_mannheim/informatik/swt/naorobotpipeline/model/RobotWalking.java
