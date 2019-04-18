@@ -66,8 +66,9 @@ public class MainController {
 		return robController.letNaoTurnRight();
 	}
 
+	//The local ip is the robot which i have tested with
 	@RequestMapping(value = "/start", method = RequestMethod.GET)
-	public String startRobot(@RequestParam(name = "naoIP", required = false, defaultValue = "nao.local") String naoIP,
+	public String startRobot(@RequestParam(name = "naoIP", required = false, defaultValue = "192.168.1.143") String naoIP,
 			@RequestParam(name = "naoPort", required = false, defaultValue = "9559") String naoPort, Model model) {
 
 		model.addAttribute("naoIP", naoIP);

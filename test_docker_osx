@@ -1,8 +1,9 @@
-FROM openjdk:8
-FROM maven:3.5.3-jdk-8-alpine
+FROM maven:3.5.3-jdk-8
 
 RUN mkdir webapp
 
 COPY ./ ./
 
 RUN cd local-maven-repo && rm -r local-maven-repo && ls && echo "----" && cd .. && ls && echo "----" &&  cd local-maven-repo && mvn deploy:deploy-file -DgroupId=org.uni.mannheim.naorobot -DartifactId=naorobotMac -Dversion=1.0 -Durl=file:./local-maven-repo/ -DrepositoryId=local-maven-repo -DupdateReleaseInfo=true -Dfile=./java-naoqi-sdk-2.1.4.13-mac64.jar && mvn deploy:deploy-file -DgroupId=org.uni.mannheim.naorobot -DartifactId=naorobotLinux -Dversion=1.0 -Durl=file:./local-maven-repo/ -DrepositoryId=local-maven-repo -DupdateReleaseInfo=true -Dfile=./java-naoqi-sdk-2.1.4.13-linux64.jar && ls && echo "----" && mvn deploy:deploy-file -DgroupId=org.uni.mannheim.naorobot -DartifactId=naorobotWindows -Dversion=1.0 -Durl=file:./local-maven-repo/ -DrepositoryId=local-maven-repo -DupdateReleaseInfo=true -Dfile=./java-naoqi-sdk-2.1.4.13-win32-vs2010.jar  && cd .. && mvn clean install
+
+ENTRYPOINT java -jar target/PipelineNaoRobot-0.0.1-SNAPSHOT.jar
