@@ -14,7 +14,7 @@ import de.uni_mannheim.informatik.swt.naorobotpipeline.model.IWordMemory;
 public class MainController {
 
 	@Autowired
-	private RobotControllerTest robController;
+	private RobotController robController;
 
 	@Autowired
 	WordController wordContr;
