@@ -1,5 +1,8 @@
 package de.uni_mannheim.informatik.swt.naorobotpipeline.model;
 
+/**
+ * @author Selcuk, Murat Ugur This class is a representation of a singe key-pair value
+ */
 public class Word {
 
 	private String key;

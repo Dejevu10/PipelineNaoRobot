@@ -18,6 +18,7 @@ public class RobotRepresentation implements IRobotRepresentation {
 
 	}
 
+	@Override
 	public void setConnection(String ip, String port) {
 
 		String robot = "tcp://" + ip + ":" + port;
@@ -31,6 +32,9 @@ public class RobotRepresentation implements IRobotRepresentation {
 
 	}
 
+	/**
+	 * when connection is set, initial greeting
+	 */
 	private void sayHello() {
 
 		try {
@@ -40,6 +44,10 @@ public class RobotRepresentation implements IRobotRepresentation {
 			e.printStackTrace();
 		}
 	}
+
+	/**
+	 * nao stands up from the sitting position
+	 */
 
 	public void standUp() {
 
@@ -63,6 +71,12 @@ public class RobotRepresentation implements IRobotRepresentation {
 			session = null;
 		}
 	}
+
+	/**
+	 * check if the connection is established
+	 * 
+	 * @return
+	 */
 
 	public boolean checkConnection() {
 
@@ -99,7 +113,7 @@ public class RobotRepresentation implements IRobotRepresentation {
 			robotWalk.moveLeft(yWalk, session);
 		} else if (move == Movement.RIGHT) {
 			robotWalk.moveRight(-yWalk, session);
-		}else if (move == Movement.TURNRIGHT) {
+		} else if (move == Movement.TURNRIGHT) {
 			robotWalk.turnRight(xWalk, session);
 		}
 
